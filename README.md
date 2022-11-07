@@ -11,3 +11,4 @@
 
 ## Build
 `yarn build`
+# gif-editor
