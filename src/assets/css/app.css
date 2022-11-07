@@ -1,0 +1,62 @@
+@import "./vars.css";
+@import "./common/reset.css";
+@import "./common/color.css";
+@import "./common/1px.css";
+@import "./common/btn.css";
+@import "./common/util.css";
+@import "../font/css/fontello.css";
+
+/* 各模块自适应分辨率样式 */
+@media screen and (max-width: 1200px) {
+  #app {
+    & .side {
+      & .col {
+        width: 33.333333%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #app {
+    & .editor {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    & .side {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      visibility: hidden;
+      transform: translate3d(-100%, 0, 0);
+      transition: 0.3s transform, 0.3s visibility;
+      &.expand {
+        visibility: visible;
+        transform: translate3d(0, 0, 0);
+      }
+      & .col {
+        width: 25%;
+      }
+      & .home,
+      & .back {
+        display: block;
+      }
+    }
+
+    & .side-btn {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #app {
+    & .side {
+      & .col {
+        width: 33.333333%;
+      }
+    }
+  }
+}
